@@ -158,17 +158,95 @@
 // Console.WriteLine($"Максимум из первых двух: {mas2(s1, s2)}");
 // Console.WriteLine($"Среднееврифметическое {CalculateAverage(s1, s2, s3)}");
 
-double MetersToFeet(double meters)
+// double MetersToFeet(double meters)
+// {
+//     return meters * 3.28084;
+// }
+// double CelsiusToFahrenheit(double celsius)
+// {
+//     return celsius * 1.8 + 32;
+// }
+
+// Console.WriteLine($"2.5 метра = {MetersToFeet(2.5)}");
+// Console.WriteLine($"56.263 метра = {MetersToFeet(56.263)}");
+// Console.WriteLine($"6 цельсия = {CelsiusToFahrenheit(6)}");
+// Console.WriteLine($"13 цельсия = {CelsiusToFahrenheit(13)}");
+Console.Write("Введите пароль: ");
+string h = Console.ReadLine();
+
+string corpassword = "Qwerty12345";
+
+bool len(string h)
 {
-    return meters * 3.28084;
-}
-double CelsiusToFahrenheit(double celsius)
-{
-    return celsius * 1.8 + 32;
+    if (h.Length >= 8)
+    {
+        return true;
+    }
+
+    return false;
 }
 
-Console.WriteLine($"2.5 метра = {MetersToFeet(2.5)}");
-Console.WriteLine($"56.263 метра = {MetersToFeet(56.263)}");
-Console.WriteLine($"6 цельсия = {CelsiusToFahrenheit(6)}");
-Console.WriteLine($"13 цельсия = {CelsiusToFahrenheit(13)}");
+bool dig(string h)
+{
+    foreach (char letter in h)
+    {
+        if (char.IsDigit(letter))
+        {
+            return true;
+        }
+    }
 
+    return false;
+}
+
+bool Up(string h)
+{
+    foreach (char letter in h)
+    {
+        if (char.IsUpper(letter))
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool val(string h)
+{
+    if (len(h) == true && dig(h) == true && Up(h) == true)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+if (h == corpassword && val(h) == true)
+{
+    Console.WriteLine("Пароль подошел");
+}
+else
+{
+    Console.WriteLine("Пароль не подошел");
+
+    if (len(h) == false)
+    {
+        Console.WriteLine("Длина меньше 8 символов");
+    }
+
+    if (dig(h) == false)
+    {
+        Console.WriteLine("Пароль не содержит цифр");
+    }
+
+    if (Up(h) == false)
+    {
+        Console.WriteLine("Нет заглавных букв");
+    }
+
+    if (h != corpassword)
+    {
+        Console.WriteLine("Пароль не совпадает с правильным паролем");
+    }
+}
