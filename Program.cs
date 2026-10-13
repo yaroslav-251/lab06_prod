@@ -81,5 +81,21 @@
 // Console.WriteLine($"5 + 10 = {Add(5, 10)}");
 // Console.WriteLine($"Площадь 2x2 больше площади 1x5: {CalculateRectangleArea(2, 2) > CalculateRectangleArea(1, 5)}");
 
+Console.WriteLine();
+Console.WriteLine("Методы + цикл");
+for (int i = 1; i <= 5; i++)
+{
+    PrintNumberInfo(i);
+}
+
+bool IsEven(int number) {
+    return number % 2 == 0;
+}
+
+void PrintNumberInfo(int number)
+{
+    string parity = IsEven(number) ? "чётное" : "нечётное";
+    Console.WriteLine($"{number} — {parity} число");
+}
 
 
