@@ -100,62 +100,75 @@
 
 
 // Программа-«набор утилит для чисел»
-int number = 6;
-bool IsPrime(int number)
+// int number = 6;
+// bool IsPrime(int number)
+// {
+//     for (int i = 2; i <= number - 1; i++)
+//     {
+//         if (number % i == 0)
+//         {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// Console.WriteLine(IsPrime(number));
+
+// int FindMax(int a, int b, int c)
+// {
+//     if (a > b)
+//     {
+//         return a;
+//     }
+//     if (b > c)
+//     {
+//         return b;
+//     }
+//     if (c > a)
+//     {
+//         return c;
+//     }
+//     return a;
+// }
+// double CalculateAverage(int a, int b, int c)
+// {
+//     return ((double)(a + b + c) / 3);
+// }
+
+// Console.WriteLine($"Введите первое число:");
+// int s1 = int.Parse(Console.ReadLine());
+// Console.WriteLine($"Введите второе число:");
+// int s2 = int.Parse(Console.ReadLine());
+// Console.WriteLine($"Введите третье число:");
+// int s3 = int.Parse(Console.ReadLine());
+
+// int mas2(int c, int r)
+// {
+//     if (c > r)
+//     {
+//         return c;
+//     }
+//     return r;
+// }
+
+// Console.WriteLine($"{s1} простое: {IsPrime(s1)}");
+// Console.WriteLine($"{s2} простое: {IsPrime(s2)}");
+// Console.WriteLine($"{s3} простое: {IsPrime(s3)}");
+// Console.WriteLine($"Максимум из трех: {FindMax(s1, s2, s3)}");
+// Console.WriteLine($"Максимум из первых двух: {mas2(s1, s2)}");
+// Console.WriteLine($"Среднееврифметическое {CalculateAverage(s1, s2, s3)}");
+
+double MetersToFeet(double meters)
 {
-    for (int i = 2; i <= number - 1; i++)
-    {
-        if (number % i == 0)
-        {
-            return false;
-        }
-    }
-    return true;
+    return meters * 3.28084;
 }
-Console.WriteLine(IsPrime(number));
-
-int FindMax(int a, int b, int c)
+double CelsiusToFahrenheit(double celsius)
 {
-    if (a > b)
-    {
-        return a;
-    }
-    if (b > c)
-    {
-        return b;
-    }
-    if (c > a)
-    {
-        return c;
-    }
-    return a;
-}
-double CalculateAverage(int a, int b, int c)
-{
-    return ((double)(a + b + c) / 3);
+    return celsius * 1.8 + 32;
 }
 
-Console.WriteLine($"Введите первое число:");
-int s1 = int.Parse(Console.ReadLine());
-Console.WriteLine($"Введите второе число:");
-int s2 = int.Parse(Console.ReadLine());
-Console.WriteLine($"Введите третье число:");
-int s3 = int.Parse(Console.ReadLine());
-
-int mas2(int c, int r)
-{
-    if (c > r)
-    {
-        return c;
-    }
-    return r;
-}
-
-Console.WriteLine($"{s1} простое: {IsPrime(s1)}");
-Console.WriteLine($"{s2} простое: {IsPrime(s2)}");
-Console.WriteLine($"{s3} простое: {IsPrime(s3)}");
-Console.WriteLine($"Максимум из трех: {FindMax(s1, s2, s3)}");
-Console.WriteLine($"Максимум из первых двух: {mas2(s1, s2)}");
-Console.WriteLine($"Среднееврифметическое {CalculateAverage(s1, s2, s3)}");
-
+Console.WriteLine($"2.5 метра = {MetersToFeet(2.5)}");
+Console.WriteLine($"56.263 метра = {MetersToFeet(56.263)}");
+Console.WriteLine($"6 цельсия = {CelsiusToFahrenheit(6)}");
+Console.WriteLine($"13 цельсия = {CelsiusToFahrenheit(13)}");
 
