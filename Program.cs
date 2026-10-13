@@ -57,3 +57,29 @@
 // Console.WriteLine($"Площадь 2x2 больше площади 1x5: {CalculateRectangleArea(2, 2) > CalculateRectangleArea(1, 5)}");
 
 
+// class Program {
+//     static void Main() {
+//         Console.WriteLine(Add(2, 3));  // вызовет первый вариант: int Add(int, int) → 5
+//         Console.WriteLine(Add(2.5, 3.5)); // вызовет второй вариант: double Add(double, double) → 6.0
+//         Console.WriteLine(Add(2, 3, 4)); // вызовет третий вариант: int Add(int, int, int) → 9
+//     }
+
+//     static int Add(int a, int b) {
+//         return a + b;
+//     }
+
+//     static double Add(double a, double b) {
+//         return a + b;
+//     }
+
+//     static int Add(int a, int b, int c) {
+//         return a + b + c;
+//     }
+// }
+
+// Console.WriteLine();
+// Console.WriteLine($"5 + 10 = {Add(5, 10)}");
+// Console.WriteLine($"Площадь 2x2 больше площади 1x5: {CalculateRectangleArea(2, 2) > CalculateRectangleArea(1, 5)}");
+
+
+
